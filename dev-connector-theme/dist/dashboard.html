@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to DevConnector</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="dashboard.html"> <i class="fa fa-code"></i> DevConnector </a>
+      </h1>
+
+      <ul>
+        <li><a href="profiles.html">Developers</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li>
+          <a href="dashboard.html"
+            ><i class="fas fa-user"> </i
+            ><span class="hide-sm">Dashboard</span></a
+          >
+        </li>
+        <li>
+          <a href="index.html"
+            ><i class="fas fa-sign-out-alt"> </i
+            ><span class="hide-sm">Logout</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="container">
+      <h1 class="large text-primary">Dashboard</h1>
+      <p class="lead"><i class="fa fa-user"></i>Welcome Pratik Iyer!</p>
+      <div class="dash-buttons">
+        <a href="create-profile.html" class="btn">
+          <i class="fas fa-user-circle text-primary"></i>
+          Edit Profile
+        </a>
+        <a href="add-experience.html" class="btn">
+          <i class="fab fa-black-tie text-primary"></i>
+          Add Experience
+        </a>
+        <a href="add-education.html" class="btn">
+          <i class="fas fa-graduation-cap text-primary"></i>
+          Add Education
+        </a>
+      </div>
+
+      <h2 class="my-2">Expreience Credentials</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <td>Company</td>
+            <td class="hide-sm">Title</td>
+            <td class="hide-sm">Years</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Google</td>
+            <td class="hide-sm">Web Developer</td>
+            <td class="hide-sm">Oct 2011 - curr</td>
+            <td><button class="btn btn-danger">Delete</button></td>
+          </tr>
+          <tr>
+            <td>Amazon</td>
+            <td class="hide-sm">Junior Web Developer</td>
+            <td class="hide-sm">Aug 2004 - Oct 2007</td>
+            <td><button class="btn btn-danger">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="my-2">Education Credentials</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <td>School</td>
+            <td class="hide-sm">Degree</td>
+            <td class="hide-sm">Field of Study</td>
+            <td class="hide-sm">Years</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DTU</td>
+            <td class="hide-sm">Bachelors in tech</td>
+            <td class="hide-sm">Software</td>
+            <td class="hide-sm">Aug 2000 - May 2004</td>
+            <td><button class="btn btn-danger">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="my-2">
+        <button class="btn btn-danger">
+          <i class="fas fa-user-minus"></i>
+          Delete Account
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

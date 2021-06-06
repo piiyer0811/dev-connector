@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to DevConnector</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="dashboard.html"> <i class="fa fa-code"></i> DevConnector </a>
+      </h1>
+
+      <ul>
+        <li><a href="profiles.html">Developers</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <section class="container">
+      <h1 class="large text-primary">Sign Up</h1>
+      <p class="lead"><i class="fa fa-user"></i>Create Your account!</p>
+      <form action="dashboard.html" class="form">
+        <div class="form-group">
+          <input type="text" placeholder="Name" />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" />
+          <small class="form-text"
+            >This Website uses gravtar so use an email which has an image
+            associated with it.</small
+          >
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" />
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Confirm Password" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Sign Up!</button>
+        </div>
+      </form>
+      <p class="my-1">
+        Already have an account? <a href="login.html">Sign in </a>
+      </p>
+    </section>
+  </body>
+</html>
