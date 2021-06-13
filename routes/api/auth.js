@@ -1,22 +1,22 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const auth = require("../../middleware/auth");
-const User = require("../../models/User");
-const { check, validationResult } = require("express-validator");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const config = require("config");
+const auth = require('../../middleware/auth');
+const User = require('../../models/User');
+const { check, validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
 
 // @route  api/auth
 // @desc   test route
 // @acess  protected
-router.get("/", auth, async (req, res) => {
+router.get('/', auth, async (req, res) => {
   try {
-    const user = await User.findById(req.user.id).select("-password");
+    const user = await User.findById(req.user.id).select('-password');
     res.json(user);
   } catch (e) {
     console.error(e.message);
-    res.status(500).send("server error");
+    res.status(500).send('server error');
   }
 });
 
@@ -24,10 +24,10 @@ router.get("/", auth, async (req, res) => {
 // @desc   Login user
 // @acess  public
 router.post(
-  "/",
+  '/',
   [
-    check("email", "Please include a valid email").isEmail(),
-    check("password").exists(),
+    check('email', 'Please include a valid email').isEmail(),
+    check('password').exists(),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -44,7 +44,7 @@ router.post(
       if (!user) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "Invalid Credentials" }] });
+          .json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
 
       const isMatch = await bcrypt.compare(password, user.password);
@@ -52,7 +52,7 @@ router.post(
       if (!isMatch) {
         return res
           .status(400)
-          .json({ errors: [{ msg: "Invalid Credentialswububububs" }] });
+          .json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
 
       //Send/return Json web token
@@ -63,7 +63,7 @@ router.post(
         },
       };
 
-      const jwtSecret = config.get("jwtSecret");
+      const jwtSecret = config.get('jwtSecret');
       jwt.sign(
         payload,
         jwtSecret,
@@ -80,7 +80,7 @@ router.post(
       );
     } catch (e) {
       console.error(e);
-      res.status(500).send("Server Error");
+      res.status(500).send('Server Error');
     }
   }
 );
