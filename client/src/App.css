@@ -277,7 +277,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: aliceblue;
+  background-color: white;
   color: #333;
 }
 a {
@@ -427,6 +427,20 @@ img {
 }
 .post img {
   width: 150px;
+}
+
+.post .post-date {
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.post .comment-count {
+  background: var(--light-color);
+  color: var(--primary-color);
+  padding: 0.1rem 0.2rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
 }
 @media (max-width: 700px) {
   .hide-sm {

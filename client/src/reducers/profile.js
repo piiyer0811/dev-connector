@@ -5,6 +5,7 @@ import {
   PROFILE_ERROR,
   UPDATE_PROFILE,
   GET_REPOS,
+  NO_REPOS,
 } from '../actions/types';
 
 const initialState = {
@@ -39,11 +40,17 @@ const reducer = (state = initialState, action) => {
         repos: payload,
         loading: false,
       };
+    case NO_REPOS:
+      return {
+        ...state,
+        repos: [],
+      };
     case PROFILE_ERROR:
       return {
         ...state,
         error: payload,
         loading: false,
+        profile: null,
       };
     case CLEAR_PROFILE:
       return {

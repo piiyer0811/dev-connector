@@ -67,7 +67,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             type='text'
             placeholder='Name'
             value={formData.name}
-            // required
+            required
           />
         </div>
         <div className='form-group'>
@@ -77,7 +77,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             type='email'
             placeholder='Email Address'
             value={formData.email}
-            //required
+            required
           />
           <small className='form-text'>
             This Website uses gravtar so use an email which has an image
@@ -91,7 +91,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             type='password'
             placeholder='Password'
             value={formData.password}
-            // required
+            required
           />
         </div>
         <div className='form-group'>
@@ -101,7 +101,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             type='password'
             placeholder='Confirm Password'
             value={formData.confirmPassword}
-            //required
+            required
           />
         </div>
         <div className='form-group'>
