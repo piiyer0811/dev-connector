@@ -15,15 +15,15 @@ Live link: <a href="https://warm-anchorage-02588.herokuapp.com/" target="_blank"
 
 ---
 
-<img src="img/developer-profiles.png">
+<img src="img/profiles.png">
 
 ---
 
-<img src="img/post-feed.png">
+<img src="img/profile.png">
 
 ---
 
-<img src="img/comment-feed.png">
+<img src="img/posts.png">
 
 ---
 
