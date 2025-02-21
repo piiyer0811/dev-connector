@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:true}));
 connectDB();
 
 
-const PORT= process.env.PORT||5000;
+const PORT= process.env.PORT||3500;
 
 
 app.get('/', (req,res)=>{
