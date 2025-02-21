@@ -107,7 +107,7 @@ export const createProfile = (formData, history, edit = false) => {
         },
       };
 
-      const res = await axios.post('${API_BASE_URL}/api/profile', formData, config);
+      const res = await axios.post(`${API_BASE_URL}/api/profile`, formData, config);
 
       dispatch({
         type: GET_PROFILE,
