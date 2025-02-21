@@ -11,10 +11,12 @@ import {
   REMOVE_COMMENT,
 } from './types';
 
+
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 export const getPosts = () => {
   return async (dispatch) => {
     try {
-      const res = await axios.get('/api/posts');
+      const res = await axios.get(`${API_BASE_URL}/api/posts`);
 
       dispatch({
         type: GET_POSTS,
@@ -34,7 +36,7 @@ export const getPosts = () => {
 export const addLike = (id) => {
   return async (dispatch) => {
     try {
-      const res = await axios.put(`/api/posts/like/${id}`);
+      const res = await axios.put(`${API_BASE_URL}/api/posts/like/${id}`);
 
       dispatch({
         type: UPDATE_LIKES,
@@ -56,7 +58,7 @@ export const addLike = (id) => {
 export const removeLike = (id) => {
   return async (dispatch) => {
     try {
-      const res = await axios.put(`/api/posts/unlike/${id}`);
+      const res = await axios.put(`${API_BASE_URL}/api/posts/unlike/${id}`);
 
       dispatch({
         type: UPDATE_LIKES,
@@ -78,7 +80,7 @@ export const removeLike = (id) => {
 export const deletePost = (id) => {
   return async (dispatch) => {
     try {
-      await axios.delete(`/api/posts/${id}`);
+      await axios.delete(`${API_BASE_URL}/api/posts/${id}`);
 
       dispatch({
         type: DELETE_POST,
@@ -105,7 +107,7 @@ export const addPost = (formData) => {
           'Content-Type': 'application/json',
         },
       };
-      const res = await axios.post(`/api/posts`, formData, config);
+      const res = await axios.post(`${API_BASE_URL}/api/posts`, formData, config);
 
       dispatch({
         type: ADD_POST,
@@ -127,7 +129,7 @@ export const addPost = (formData) => {
 export const getPostById = (id) => {
   return async (dispatch) => {
     try {
-      const res = await axios.get(`/api/posts/${id}`);
+      const res = await axios.get(`${API_BASE_URL}/api/posts/${id}`);
 
       dispatch({
         type: GET_POST,
@@ -153,7 +155,7 @@ export const addComment = (formData, id) => {
         },
       };
       const res = await axios.post(
-        `/api/posts/comment/${id}`,
+        `${API_BASE_URL}/api/posts/comment/${id}`,
         formData,
         config
       );
@@ -179,7 +181,7 @@ export const removeComment = (postId, commentId) => {
   return async (dispatch) => {
     try {
       const res = await axios.delete(
-        `/api/posts/comment/${postId}/${commentId}`
+        `${API_BASE_URL}/api/posts/comment/${postId}/${commentId}`
       );
 
       dispatch({

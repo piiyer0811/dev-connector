@@ -12,6 +12,8 @@ import {
 import { setAlert } from './alert';
 import setAuthToken from '../utils/setAuthToken';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
 //Load User
 
 export const loadUser = () => async (dispatch) => {
@@ -20,7 +22,7 @@ export const loadUser = () => async (dispatch) => {
   }
 
   try {
-    const res = await axios.get('/api/auth');
+    const res = await axios.get(`${API_BASE_URL}/api/auth`);
     dispatch({
       type: USER_LOADED,
       payload: res.data,
@@ -45,7 +47,7 @@ export const register =
     const body = JSON.stringify({ name, email, password });
 
     try {
-      const res = await axios.post('/api/users/', body, config);
+      const res = await axios.post(`${API_BASE_URL}/api/users/`, body, config);
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -79,7 +81,7 @@ export const login =
     const body = JSON.stringify({ email, password });
 
     try {
-      const res = await axios.post('/api/auth/', body, config);
+      const res = await axios.post(`${API_BASE_URL}/api/auth/`, body, config);
 
       dispatch({
         type: LOGIN_SUCCESS,
