@@ -1,6 +1,9 @@
 const express= require('express');
 const connectDB= require('./config/db');
 
+const cors = require("cors");
+app.use(cors({ origin: "https://dev-connector-1-opzy.onrender.com" }));
+
 
 const app= express();
 
