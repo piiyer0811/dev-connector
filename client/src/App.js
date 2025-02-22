@@ -9,6 +9,7 @@ import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import PrivateRoute from './components/routing/PrivateRoute';
 import setAuthToken from './utils/setAuthToken';
+import NotFound from './components/NotFound';
 
 //redux
 
@@ -75,6 +76,7 @@ const App = () => {
               />
               <PrivateRoute exact path='/posts' component={Posts} />
               <PrivateRoute exact path='/posts/:id' component={Post} />
+              <Route component={NotFound} /> {/* Catch-all route */}
             </Switch>
           </section>
         </Fragment>
