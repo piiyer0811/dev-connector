@@ -2,7 +2,7 @@ import './App.css';
 import React, { Fragment, useEffect } from 'react';
 import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Alert from './components/layout/Alert';
